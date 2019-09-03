@@ -3,10 +3,11 @@ import TodoForm from './components/TodoComponents/TodoForm';
 import Todo from './components/TodoComponents/Todo';
 import TodoList from './components/TodoComponents/TodoList';
 
-fullList: [
+const fullList =  [
   {
     val1: 'Inside an object!'
   }
+]
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -15,8 +16,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      fullList
-    }
+      // fullList
+    };
       //Store the data object of ToDo lists here. Must be able to update. How do I pass this state as a prop to TodoList?
 
 //  task: event.target.value (from ToDoList...how to pass tht back up?)

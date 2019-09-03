@@ -28,7 +28,7 @@ const TodoList = props => {
         return (
             <div>
             Hello from TodoList!
-            {props.fullList.val1}
+            {/* {props.fullList.val1} */}
         {/* fullList.map(() => {
           <Todo />  }) */}
             {/* {Here, I'll map over every object within the array, display ToDo for every one.} */}

@@ -12,7 +12,7 @@ const TodoForm = props => {
                 type="text" 
                 name="todoName"
                 placeholder="Enter To-Do"
-                value={this.state.todoName}
+                // value={this.state.todoName}
                 onChange={props.handleChange}
                 >
                 </input>
