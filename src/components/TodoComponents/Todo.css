@@ -1,0 +1,11 @@
+div.item.finished{
+    text-decoration: line-through !important;   
+    color: red !important;
+    background: red !important;
+}
+
+div.item.finished p {
+    text-decoration: line-through !important;   
+    color: red !important;
+    background: red !important; 
+}
