@@ -3,37 +3,20 @@
 
 import React from 'react';
 
-// class TodoList extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         // this.state = {
-//         //     fullList: null
-//         // };
-//     }
-//     render() {
-//         return (
-//             <div>
-//             Hello from TodoList!
-//             {props.fullList.val1}
-//         {/* fullList.map(() => {
-//           <Todo />  }) */}
-//             {/* {Here, I'll map over every object within the array, display ToDo for every one.} */}
-//             </div>
-//         )
-//     }
-// }
+import Todo from './Todo';
 
 
 const TodoList = props => {
         return (
-            <div>
-            Hello from TodoList!
-            {/* {props.fullList.val1} */}
-        {/* fullList.map(() => {
-          <Todo />  }) */}
-            {/* {Here, I'll map over every object within the array, display ToDo for every one.} */}
-            </div>
-        )
+        <div>
+            {props.todoList.map(item => (
+            <Todo key={item.id} item={item} toggleItem={props.toggleItem} />  
+            ))}
+            <button onClick={props.clearPurchased}>
+                Clear Purchased
+            </button>
+        </div>
+    )
 }
 
 

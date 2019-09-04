@@ -1,37 +1,46 @@
 import React from 'react';
 
-const TodoForm = props => {
+class TodoForm extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            todoName: '',
+        }
+    };
 
-    // sendVal = () => {
-    //     this.props.parentCallback(value)
-    // }
+    handleChange = event => {
+        this.setState({
+        [event.target.name]: event.target.value
+        });
+      }
+
+    todoHandler = event => {
+        // this.state.fullList.push();
+        event.preventDefault();
+        this.props.addItem(this.state.todoName);
+      };
+
+
+    render() {
         return (
-            <form className="todo-form" onSubmit={props.todoHandler}>
+            <form className="todo-form" onSubmit={this.todoHandler}>
                 {/* {Here, I need to pass the user's input value up to App as props.} */}
                 <input 
                 type="text" 
                 name="todoName"
                 placeholder="Enter To-Do"
-                // value={this.state.todoName}
-                onChange={props.handleChange}
+                value={this.todoName}
+                onChange={this.handleChange}
                 >
-                </input>
-
-                <input
-                type="checkbox">
                 </input>
 
                 <button 
-                type="submit"
                 >
                     Add To-Do
                 </button>
-
-                <button>
-                Clear Completed
-                </button>
             </form>
         )
+    }
 }
 
 
